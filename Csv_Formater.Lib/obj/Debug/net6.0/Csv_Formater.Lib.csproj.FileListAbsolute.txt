@@ -1,0 +1,12 @@
+/Users/jonasvogel/RiderProjects/Csv_Formater/Csv_Formater.Lib/bin/Debug/net6.0/Csv_Formater.Lib.deps.json
+/Users/jonasvogel/RiderProjects/Csv_Formater/Csv_Formater.Lib/bin/Debug/net6.0/Csv_Formater.Lib.dll
+/Users/jonasvogel/RiderProjects/Csv_Formater/Csv_Formater.Lib/bin/Debug/net6.0/Csv_Formater.Lib.pdb
+/Users/jonasvogel/RiderProjects/Csv_Formater/Csv_Formater.Lib/obj/Debug/net6.0/Csv_Formater.Lib.csproj.AssemblyReference.cache
+/Users/jonasvogel/RiderProjects/Csv_Formater/Csv_Formater.Lib/obj/Debug/net6.0/Csv_Formater.Lib.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jonasvogel/RiderProjects/Csv_Formater/Csv_Formater.Lib/obj/Debug/net6.0/Csv_Formater.Lib.AssemblyInfoInputs.cache
+/Users/jonasvogel/RiderProjects/Csv_Formater/Csv_Formater.Lib/obj/Debug/net6.0/Csv_Formater.Lib.AssemblyInfo.cs
+/Users/jonasvogel/RiderProjects/Csv_Formater/Csv_Formater.Lib/obj/Debug/net6.0/Csv_Formater.Lib.csproj.CoreCompileInputs.cache
+/Users/jonasvogel/RiderProjects/Csv_Formater/Csv_Formater.Lib/obj/Debug/net6.0/Csv_Formater.Lib.dll
+/Users/jonasvogel/RiderProjects/Csv_Formater/Csv_Formater.Lib/obj/Debug/net6.0/refint/Csv_Formater.Lib.dll
+/Users/jonasvogel/RiderProjects/Csv_Formater/Csv_Formater.Lib/obj/Debug/net6.0/Csv_Formater.Lib.pdb
+/Users/jonasvogel/RiderProjects/Csv_Formater/Csv_Formater.Lib/obj/Debug/net6.0/ref/Csv_Formater.Lib.dll

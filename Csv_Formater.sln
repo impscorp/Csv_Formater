@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Csv_Formater", "Csv_Formater\Csv_Formater.csproj", "{8DDE64AE-8164-4F49-B6E9-1DB944A15E20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Csv_Formater.Lib", "Csv_Formater.Lib\Csv_Formater.Lib.csproj", "{448C3782-AA82-47A9-8BD5-16ED669DE97B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MonoMac", "MonoMac\MonoMac.csproj", "{64E5820C-1BBB-4259-947A-44CEC108F123}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8DDE64AE-8164-4F49-B6E9-1DB944A15E20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DDE64AE-8164-4F49-B6E9-1DB944A15E20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DDE64AE-8164-4F49-B6E9-1DB944A15E20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DDE64AE-8164-4F49-B6E9-1DB944A15E20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{448C3782-AA82-47A9-8BD5-16ED669DE97B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{448C3782-AA82-47A9-8BD5-16ED669DE97B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{448C3782-AA82-47A9-8BD5-16ED669DE97B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{448C3782-AA82-47A9-8BD5-16ED669DE97B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64E5820C-1BBB-4259-947A-44CEC108F123}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64E5820C-1BBB-4259-947A-44CEC108F123}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64E5820C-1BBB-4259-947A-44CEC108F123}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64E5820C-1BBB-4259-947A-44CEC108F123}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
