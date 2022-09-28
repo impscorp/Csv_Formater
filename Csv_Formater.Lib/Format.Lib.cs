@@ -1,52 +1,83 @@
-﻿namespace Csv_Formater.Lib;
+﻿using System.Data;
+
+namespace Csv_Formater.Lib;
 
 public class FormatCsv
 {
     #region properties
-    public IEnumerable<string> FormattedLines { get; }
-    
-    public IEnumerable<string> Lines { get; }
-    public string OutputPath { get; }
+    public IEnumerable<string> FormattedLines { get; set; }
+    public string Output { get; set; }
+    public string Input { get; set; }
+
+    public IEnumerable<string> Lines { get; set; }
+    public IEnumerable<string> NewLines { get; set; }
+    public IEnumerable<string> FirstRow { get; }
+
 
     #endregion
     
     #region Constructor
-    public FormatCsv(string inPath, string outPath, int ws)
+    public FormatCsv()
     {
-        Lines = BuildCSV(inPath);
-        FormattedLines = UserFormat(inPath, ws);
-        OutputPath = outPath;
     }
     #endregion
     #region Functions
     public static IEnumerable<string> UserFormat(string inputPath, int whitespace = 10)
     {
-        var formattedLines = BuildCSV(inputPath);
+        var formattedLines = ReadCsvandSplit(inputPath);
  
         return formattedLines.Select(line => line.Split('\t')
                 .Select(text => text.Length < whitespace ? text.PadRight(whitespace) : text)
                 .Aggregate((text1, text2) => text1 + "\t" + text2));
     }
 
-    private static IEnumerable<string> BuildCSV(string inputPath)
+    public static IEnumerable<string> ReadCsvandSplit(string inputPath)
     {
         //read csv file
         var lines = File.ReadAllLines(inputPath);
 
         //format csv file
-        var formattedLines =
+        var splitLines =
             lines.Select(line => line.Replace(",", "\t"))
                 .Select(line => line.Replace(";", "\t"))
                 .Select(line => line.Replace("\r", ""))
                 .Select(line => line.Replace("\n", ""));
-        return formattedLines;
+        return splitLines;
     }
 
-    public static void SaveCsv(string outputpath, IEnumerable<string> Lines)
+    public static void SaveCsv(string outputpath, IEnumerable<string> lines)
     {
-        //write csv file
-        File.WriteAllLines(outputpath, Lines);
+        File.WriteAllLines(outputpath, lines);
     }
+    
+    public static IEnumerable<string> AddCollum(IEnumerable<string> lines, string collumName)
+    {
+        var newLines = lines.Select(line => collumName + "\t" + line);
+        return newLines;
+    }
+
+   public DataTable ToDatatable()
+    {
+        var dt = new DataTable();
+        //add collums for every header in the csv
+        foreach (var item in FirstRow)
+        {
+            dt.Columns.Add(item);
+        }
+        //add rows for the datatable         
+        foreach (var item in Lines)
+        {
+            //exclude first row in line
+            if (item != Lines.First())
+            {
+                dt.Rows.Add(item.Split("\t"));
+            }
+        }
+
+        return dt;
+    }
+
+    
     
     //public static void Collums_AmountandNames(string amount, string names);
 
