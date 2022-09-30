@@ -84,11 +84,14 @@ public class FormatCsv
         var diff = lines1.Except(lines2);
         return diff;
     }
-    
-    public static IEnumerable<string> GetLinesInQuotes()
+
+    public static IEnumerable<int> GetIndexLinesInQuotes()
     {
-        var linesInQuotes = _tempLines.Where(line => line.Contains("\""));
-        return linesInQuotes;
+        var indexLinesInQuotes = _tempLines.Select((line, index) => new { line, index })
+            .Where(x => x.line.Contains("\""))
+            .Select(x => x.index);
+        return indexLinesInQuotes;
     }
+    
     #endregion
 }   
