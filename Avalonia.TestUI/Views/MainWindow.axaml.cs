@@ -13,8 +13,12 @@ namespace Avalonia.TestUI.Views
         public MainWindow()
         {
             Activated += MainWindow_Activated;
+            
             InitializeComponent();
-            this.AttachDevTools();
+#if DEBUG
+            this.AttachDevTools();  
+#endif
+
         }
         #endregion
         
@@ -26,10 +30,13 @@ namespace Avalonia.TestUI.Views
 
             var cols = vm.DataView.Table.Columns;
             grid.Columns.Clear();
-        
             for (var i = 0; i < cols.Count; i++)
             {
-                grid.Columns.Add(new DataGridTextColumn { Header = cols[i].ColumnName, Binding = new Binding($"vm._firstRow[{i}]"), });
+                grid.Columns.Add(new DataGridTextColumn
+                {
+                    Header = cols[i].ColumnName, 
+                    Binding = new Binding($"vm.Rows[{i}]")
+                });
             }
         }
         private void Button_Click(object? sender, RoutedEventArgs e)
@@ -37,5 +44,15 @@ namespace Avalonia.TestUI.Views
             this.Close();
         }
         #endregion
+
+        private void Open_Click(object? sender, RoutedEventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        private void Save_Click(object? sender, RoutedEventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

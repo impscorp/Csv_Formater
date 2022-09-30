@@ -11,6 +11,22 @@
     <Design.DataContext>
         <vm:MainWindowViewModel/>
     </Design.DataContext>
-    <DataGrid Name="DataGrid" Items="{Binding DataView}">
-    </DataGrid>
+    
+    <Grid Width="1000" Height="500">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal">
+            <Button Content="Open" Click="Open_Click"/>
+            <Button Content="Save" Click="Save_Click"/>
+        </StackPanel>
+        
+        <DataGrid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Name="DataGrid" Items="{Binding DataView}">
+        </DataGrid>
+    </Grid>
 </Window>

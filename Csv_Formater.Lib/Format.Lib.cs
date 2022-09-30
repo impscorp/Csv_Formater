@@ -10,9 +10,6 @@ public class FormatCsv
     public string Input { get; set; }
 
     public IEnumerable<string> Lines { get; set; }
-    public IEnumerable<string> NewLines { get; set; }
-    public IEnumerable<string> FirstRow { get; }
-
 
     #endregion
     
@@ -60,7 +57,7 @@ public class FormatCsv
     {
         var dt = new DataTable();
         //add collums for every header in the csv
-        foreach (var item in FirstRow)
+        foreach (var item in Lines.First().Split('\t'))
         {
             dt.Columns.Add(item);
         }
@@ -76,8 +73,22 @@ public class FormatCsv
 
         return dt;
     }
+   
+    public static IEnumerable<string> CompareCsv(string inputPath1, string inputPath2)
+    {
+        var lines1 = ReadCsvandSplit(inputPath1);
+        var lines2 = ReadCsvandSplit(inputPath2);
 
+        var diff = lines1.Except(lines2);
+        return diff;
+    }
     
+    public static IEnumerable<string> GetLinesInQuotes(string inputPath)
+    {
+        var lines = ReadCsvandSplit(inputPath);
+        var linesInQuotes = lines.Where(line => line.Contains("\""));
+        return linesInQuotes;
+    }
     
     //public static void Collums_AmountandNames(string amount, string names);
 
