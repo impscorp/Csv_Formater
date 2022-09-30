@@ -19,10 +19,10 @@ namespace Avalonia.TestUI.ViewModels
         public MainWindowViewModel()
         {
             FormatCsv csv = new FormatCsv();
-            csv.Lines = FormatCsv.ReadCsvandSplit($"{Environment.CurrentDirectory}/CSVFORMATER/csvsource.txt");
-            FirstRow = FormatCsv.ReadCsvandSplit($"{Environment.CurrentDirectory}/CSVFORMATER/csvsource.txt").First().Split('\t');
+            csv._Lines = FormatCsv.ReadCsv_and_Split($"{Environment.CurrentDirectory}/CSVFORMATER/csvsource.txt");
+            FirstRow = FormatCsv.ReadCsv_and_Split($"{Environment.CurrentDirectory}/CSVFORMATER/csvsource.txt").First().Split('\t');
             RowsDataTable = csv.ToDatatable();
-            Rows = StringToArray(csv.Lines);
+            Rows = StringToArray(csv._Lines);
         }
         #endregion
         

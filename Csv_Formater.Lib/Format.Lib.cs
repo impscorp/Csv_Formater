@@ -8,8 +8,9 @@ public class FormatCsv
     public IEnumerable<string> FormattedLines { get; set; }
     public string Output { get; set; }
     public string Input { get; set; }
-
-    public IEnumerable<string> Lines { get; set; }
+    private static string _Seperator { get; set; }
+    public IEnumerable<string> _Lines { get; set; }
+    public static IEnumerable<string> _tempLines { get; set; }
 
     #endregion
     
@@ -20,23 +21,24 @@ public class FormatCsv
     #endregion
     #region Functions
     public static IEnumerable<string> UserFormat(string inputPath, int whitespace = 10)
-    {
-        var formattedLines = ReadCsvandSplit(inputPath);
+    { 
+        var formattedLines = ReadCsv_and_Split(inputPath, _Seperator );
  
-        return formattedLines.Select(line => line.Split('\t')
+        return formattedLines.Select(line => line.Split(_Seperator)
                 .Select(text => text.Length < whitespace ? text.PadRight(whitespace) : text)
-                .Aggregate((text1, text2) => text1 + "\t" + text2));
+                .Aggregate((text1, text2) => text1 + " " + text2));
     }
 
-    public static IEnumerable<string> ReadCsvandSplit(string inputPath)
+    public static IEnumerable<string> ReadCsv_and_Split(string inputPath, string seperator = "\t")
     {
+        _Seperator = seperator;
         //read csv file
-        var lines = File.ReadAllLines(inputPath);
+        _tempLines = File.ReadAllLines(inputPath);
 
         //format csv file
         var splitLines =
-            lines.Select(line => line.Replace(",", "\t"))
-                .Select(line => line.Replace(";", "\t"))
+            _tempLines.Select(line => line.Replace(",", _Seperator))
+                .Select(line => line.Replace(";", _Seperator))
                 .Select(line => line.Replace("\r", ""))
                 .Select(line => line.Replace("\n", ""));
         return splitLines;
@@ -49,7 +51,7 @@ public class FormatCsv
     
     public static IEnumerable<string> AddCollum(IEnumerable<string> lines, string collumName)
     {
-        var newLines = lines.Select(line => collumName + "\t" + line);
+        var newLines = lines.Select(line => collumName + _Seperator + line);
         return newLines;
     }
 
@@ -57,17 +59,17 @@ public class FormatCsv
     {
         var dt = new DataTable();
         //add collums for every header in the csv
-        foreach (var item in Lines.First().Split('\t'))
+        foreach (var item in _Lines.First().Split(_Seperator))
         {
             dt.Columns.Add(item);
         }
         //add rows for the datatable         
-        foreach (var item in Lines)
+        foreach (var item in _Lines)
         {
             //exclude first row in line
-            if (item != Lines.First())
+            if (item != _Lines.First())
             {
-                dt.Rows.Add(item.Split("\t"));
+                dt.Rows.Add(item.Split(_Seperator));
             }
         }
 
@@ -76,22 +78,17 @@ public class FormatCsv
    
     public static IEnumerable<string> CompareCsv(string inputPath1, string inputPath2)
     {
-        var lines1 = ReadCsvandSplit(inputPath1);
-        var lines2 = ReadCsvandSplit(inputPath2);
+        var lines1 = ReadCsv_and_Split(inputPath1);
+        var lines2 = ReadCsv_and_Split(inputPath2);
 
         var diff = lines1.Except(lines2);
         return diff;
     }
     
-    public static IEnumerable<string> GetLinesInQuotes(string inputPath)
+    public static IEnumerable<string> GetLinesInQuotes()
     {
-        var lines = ReadCsvandSplit(inputPath);
-        var linesInQuotes = lines.Where(line => line.Contains("\""));
+        var linesInQuotes = _tempLines.Where(line => line.Contains("\""));
         return linesInQuotes;
     }
-    
-    //public static void Collums_AmountandNames(string amount, string names);
-
-    //public static void Records_AmountandNames(string amount, string names);
     #endregion
 }   
