@@ -1,26 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "/Users/jonasvogel/RiderProjects/Csv_Formater/Csv_Formater.Lib/Csv_Formater.Lib.csproj": {}
+    "C:\\Users\\jonasvogel\\source\\repos\\Csv_Formater\\Csv_Formater.Lib\\Csv_Formater.Lib.csproj": {}
   },
   "projects": {
-    "/Users/jonasvogel/RiderProjects/Csv_Formater/Csv_Formater.Lib/Csv_Formater.Lib.csproj": {
+    "C:\\Users\\jonasvogel\\source\\repos\\Csv_Formater\\Csv_Formater.Lib\\Csv_Formater.Lib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/jonasvogel/RiderProjects/Csv_Formater/Csv_Formater.Lib/Csv_Formater.Lib.csproj",
+        "projectUniqueName": "C:\\Users\\jonasvogel\\source\\repos\\Csv_Formater\\Csv_Formater.Lib\\Csv_Formater.Lib.csproj",
         "projectName": "Csv_Formater.Lib",
-        "projectPath": "/Users/jonasvogel/RiderProjects/Csv_Formater/Csv_Formater.Lib/Csv_Formater.Lib.csproj",
-        "packagesPath": "/Users/jonasvogel/.nuget/packages/",
-        "outputPath": "/Users/jonasvogel/RiderProjects/Csv_Formater/Csv_Formater.Lib/obj/",
+        "projectPath": "C:\\Users\\jonasvogel\\source\\repos\\Csv_Formater\\Csv_Formater.Lib\\Csv_Formater.Lib.csproj",
+        "packagesPath": "C:\\Users\\jonasvogel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jonasvogel\\source\\repos\\Csv_Formater\\Csv_Formater.Lib\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/jonasvogel/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\jonasvogel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -49,12 +50,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[6.0.7, 6.0.7]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[6.0.7, 6.0.7]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[6.0.7, 6.0.7]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.400/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100-preview.7.22377.5\\RuntimeIdentifierGraph.json"
         }
       }
     }

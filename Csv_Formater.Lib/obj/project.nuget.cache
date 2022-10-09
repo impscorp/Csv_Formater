@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "8qJ4bzcTLLiBZ/cE5X9QvUBM9Q9W6Y6G8mVi/brcagNfeYulNiltQDQjc69BWCUW4tB5GePpM/XvXqDOUZcOYA==",
+  "dgSpecHash": "7hiZiZ9rIxPHR3v75XRb3SoAvW4sDYrASarRL/K0FafH413YibtXFfIqej+A9+bCQ15qldEQYoZM/85uGu0ipg==",
   "success": true,
-  "projectFilePath": "/Users/jonasvogel/RiderProjects/Csv_Formater/Csv_Formater.Lib/Csv_Formater.Lib.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\jonasvogel\\source\\repos\\Csv_Formater\\Csv_Formater.Lib\\Csv_Formater.Lib.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jonasvogel\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.7\\microsoft.windowsdesktop.app.ref.6.0.7.nupkg.sha512",
+    "C:\\Users\\jonasvogel\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.7\\microsoft.netcore.app.ref.6.0.7.nupkg.sha512",
+    "C:\\Users\\jonasvogel\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.7\\microsoft.aspnetcore.app.ref.6.0.7.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -10,7 +10,7 @@ void BuildCsv(string fileName, int ws, string seperator)
 {
     fc.Input = $"{Environment.CurrentDirectory}/CSVFORMATER/csvsource.txt";
     fc.Output = $"{Environment.CurrentDirectory}/CSVFORMATER/{fileName}.csv";
-    fc._Lines = FormatCsv.ReadCsv_and_Split(fc.Input, seperator);
+    fc.Lines = FormatCsv.ReadCsv_and_Split(fc.Input, seperator);
     fc.FormattedLines = FormatCsv.UserFormat(fc.Input, ws);
 }
 #endregion
@@ -40,7 +40,7 @@ if (fileName != null) BuildCsv(fileName, ws, seperator);
 //Output
 Console.WriteLine("");
 // Write to file
-FormatCsv.SaveCsv(fc.Output ,fc._Lines);
+FormatCsv.SaveCsv(fc.Output ,fc.Lines);
 
 Console.WriteLine("CSV File created");
 //print FormattedLines

@@ -1,10 +1,20 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Csv_Formater", "Csv_Formater\Csv_Formater.csproj", "{8DDE64AE-8164-4F49-B6E9-1DB944A15E20}"
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.32804.182
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Csv_Formater", "Csv_Formater\Csv_Formater.csproj", "{8DDE64AE-8164-4F49-B6E9-1DB944A15E20}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Csv_Formater.Lib", "Csv_Formater.Lib\Csv_Formater.Lib.csproj", "{448C3782-AA82-47A9-8BD5-16ED669DE97B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Csv_Formater.Lib", "Csv_Formater.Lib\Csv_Formater.Lib.csproj", "{448C3782-AA82-47A9-8BD5-16ED669DE97B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Avalonia.TestUI", "Avalonia.TestUI\Avalonia.TestUI.csproj", "{42BF9595-EBDA-4174-B9DF-AF0599FAAA6B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Avalonia.TestUI", "Avalonia.TestUI\Avalonia.TestUI.csproj", "{42BF9595-EBDA-4174-B9DF-AF0599FAAA6B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Projektmappenelemente", "Projektmappenelemente", "{00A7F596-0F6A-42BD-92BD-17C21F9B2DA6}"
+	ProjectSection(SolutionItems) = preProject
+		UI\UI.csproj.user = UI\UI.csproj.user
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UI", "UI\UI.csproj", "{C984FC54-058A-45A8-B8E8-9739A4FF330F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -24,5 +34,15 @@ Global
 		{42BF9595-EBDA-4174-B9DF-AF0599FAAA6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42BF9595-EBDA-4174-B9DF-AF0599FAAA6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42BF9595-EBDA-4174-B9DF-AF0599FAAA6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C984FC54-058A-45A8-B8E8-9739A4FF330F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C984FC54-058A-45A8-B8E8-9739A4FF330F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C984FC54-058A-45A8-B8E8-9739A4FF330F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C984FC54-058A-45A8-B8E8-9739A4FF330F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D3E703DE-A5F8-4BCE-A248-FFEA3BF3A079}
 	EndGlobalSection
 EndGlobal
